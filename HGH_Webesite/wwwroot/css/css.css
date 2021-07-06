@@ -1,0 +1,577 @@
+body{
+  margin: 0px;
+  padding: 0px; 
+}
+
+/*changeing  the Bg-Color of the NavBar */
+.navbar-expand-lg {
+
+    /* background-color: #DCDCDC; */
+    background-color: #0d8c60;
+}
+/* -------------------------- */
+
+/* The padding in lg screan */
+
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 50px;
+    padding-left: 50px;
+    padding: 15px;
+}
+}
+/* -------------------------- */
+
+/* Reverse the contents in small screen */
+.navbar-nav {flex-direction: column-reverse;}
+/* -------------------------- */
+
+/* The contents of the NavBar in small screan */
+
+.navbar-nav .nav-link {
+  padding-right: 0;
+  text-align: center;
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+  float: none;
+  background-color: #e9ecef;
+}
+.dropdown-item{
+  text-align: center;
+}
+.dropdown-item:hover {
+
+  color: #e9ecef;
+  background-color:#0d8c60;
+}
+/* -------------------------- */
+/* Changing The color of the items and the fontSize */
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #0d8c60;
+  background-color: #e9ecef;
+}
+/* -------------------------- */
+
+/* The Icon of the Language */
+.iconLang{
+
+    width: 50px;
+    margin: 10px;
+}
+.row{
+    padding: auto;
+    margin: auto;
+}
+
+/* -------------------------- */
+
+/* The Carousel imgs */
+
+.d-md-block {
+    display: block!important;
+     top: 400px; 
+     left: -200px; 
+}
+/* -------------------------- */
+
+/* The begin of the words  */
+ .words{
+
+margin-top: 30px;
+margin-bottom: 30px;
+padding: 20px;
+
+}
+
+.words .card{
+
+    padding: 20px;
+    margin: 10px;
+}
+
+.words img{
+border-radius: 50%;
+} 
+
+.justify-content-between img{
+width: 250px;
+}
+.justify-content-between *{
+
+  text-align: right;
+}
+.justify-content-between *{
+
+  margin-bottom: 5px;
+}
+ /* The begin of the Honorary board  */
+.HonoraryBoard *,.lastnews *{
+
+padding: 10px;
+
+
+}
+
+.HonoraryBoard h1,.lastnews h1{
+
+    text-align: right;
+    margin-top: 80px;
+    border-right: 6px solid rgb(73, 105, 14);
+    
+    
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4rem;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    margin:10px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 3px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+/* The E-Services Page */
+
+/* The begin of the e-sevice  */
+
+.s-c1
+{
+  margin-top: 4rem;
+  justify-content: right;
+}
+
+.table-c
+{
+  margin-bottom: 5rem;
+
+}
+
+.e-service_card{
+
+border: 1px seagreen solid;
+border-radius: 10%;
+padding: 10px;
+margin: 2px;
+}
+.e-service_card:hover{
+
+  border: 1px seagreen solid;
+  background-color: #e9ecef;
+  
+  }
+.e-service_card img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.e-service_card *{
+
+  text-align: center;
+}
+.e-service_card h4{
+  color: #2d6708fc!important;
+}
+/* The end of the e-sevice  */
+
+
+ /* The begin of the footer  */
+
+ #footer {
+  padding: 30px;
+  bottom: 0px;
+  width: 100%;
+}
+#footer .section-title {
+  text-align: center;
+  color: #007b5e;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+#footer {
+  background: #0d8c60;
+}
+#footer h5{
+  padding-right: 10px;
+  border-right: 5px solid #eeeeee;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  color:#ffffff;
+}
+#footer a {
+  color: #ffffff;
+  text-decoration: none !important;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;}
+  /* The end of the footer  */
+
+  /* The begin the Section Pgae */
+.s1,.s2{
+width: 30%;
+}
+.Section_inside{
+  width: 250px;
+  height: 80px;
+  position: relative;
+  margin: 5px;
+  margin-top: 100px;
+  margin-bottom: 160px;
+ 
+}
+.Section_inside img{
+  right: 0;
+  width: 80px;
+  position: absolute;
+}
+.Section_inside h4{position:absolute; bottom: 20px;color: chocolate;}
+
+.ns{
+ 
+  border-bottom: 3px solid black;
+  width: auto;
+  height: 50px;
+  background-color: #e9ecef;
+  padding: 10px;
+}
+.ns h4{
+text-align: right;
+}
+/*----- The List Of Sections -----*/
+@media(max-width:992px){
+.section_table{
+display: none;
+width: -webkit-fill-available;
+}
+}
+svg{display: none;}
+@media(max-width:992px){
+svg{display: block;}
+}
+.section_table{
+  float: right;
+  right: 0;
+ }
+.section_table{background-color: rgba(143, 146, 146, 0.158);}
+.section_table h3{text-align: center;}
+.section_table li{border: 1px solid black;
+   list-style: none; text-align:
+    center; font-size: 20px;
+    width: 300px;margin: 10px;
+    padding: 5px;
+    cursor: context-menu;
+  }
+.section_table li:hover{
+
+  background-color: #0d8c60;
+  color: #e9ecef;
+  padding: 7px;
+  transform: scale(1);
+  transition: 0.15s all ease;
+}
+.container-fluid h4.ns{text-align: center;}
+
+@media(min-width:992px){
+.each_setcion{
+  flex-wrap: wrap;
+  border: 3px solid rgb(73, 105, 14);
+  border-radius: 6px;
+  background-color: rgba(143, 146, 146, 0.158);
+  width: 70%;
+  margin: 40px;
+  padding: 20px;
+  box-shadow: #0d8c60 1px 1px 2px 1px;
+}
+}
+@media(max-width:992px){
+.each_setcion{
+
+  flex-wrap: wrap;
+  border: 3px solid rgb(73, 105, 14);
+  border-radius: 6px;
+  background-color: rgba(143, 146, 146, 0.158);
+  padding: 20px;
+  box-shadow: #0d8c60 1px 1px 2px 1px;
+  margin-top: 10px;
+  width: 98%;
+  margin: 3px;
+  }
+}
+
+/* The begin of chart  */
+[node-id='2'] rect {
+  fill: #949191;
+  
+}
+
+[node-id='3'] rect {
+  fill: #949191;
+  
+}
+
+[node-id='4'] rect {
+  fill:#949191;
+  
+}
+
+[node-id='5'] rect {
+  fill: #949191;
+  
+}
+
+[node-id='6'] rect {
+  fill: #949191;
+  
+}
+
+[node-id='7'] rect {
+  fill: #949191;
+  
+}
+
+[node-id='8'] rect {
+  fill: #949191;
+  
+}
+
+[node-id='9'] rect {
+  fill: #949191;
+  
+}
+
+[node-id='10'] rect {
+  fill: #949191;
+  
+}
+
+[node-id='11'] rect {
+  fill: #949191;
+  
+}
+
+[node-id='12'] rect {
+  fill: #949191;
+  
+}
+
+
+
+/* The end of chart  */
+
+/* The bigin of info  */
+
+/* The side navigation menu */
+ .sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+background-color: rgb(93, 93, 95);
+  position: absolute;
+  right: 0;
+  top: 5;
+  height: 100%;
+  overflow: auto;
+   border-left: 1px solid rgb(73, 105, 14);
+  
+
+}
+
+
+.link{
+  font-size:16px;
+  font-weight:300;
+  text-align:center;
+  position:relative;
+  height:40px;
+  line-height:40px;
+  margin-top:10px;
+  overflow:hidden;
+  width:90%;
+  margin-left:5%;
+  cursor:pointer;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  
+}
+.link:after{
+  content: '';
+  position:absolute;
+  width:80%;
+  border-bottom:1px solid rgba(255, 255, 255, 0.5);
+  bottom:50%;
+  left:-100%;
+  transition-delay: all 0.5s;
+  transition: all 0.5s;
+}
+.link:hover:after,
+.link.hover:after{
+  left:100%;
+  
+}
+.link .text{
+  text-shadow:0px -40px 0px rgb(0, 0, 0);
+  transition:all 0.75s;
+  transform:translateY(100%) translateZ(0);
+  transition-delay:all 0.25s;
+}
+.link:hover .text,
+.link.hover .text{
+  text-shadow:0px -40px 0px rgba(255, 255, 255, 0);
+  transform:translateY(0%) translateZ(0) scale(1.1);
+  font-weight:600;
+  background:radial-gradient(circle at 94.02% 88.03%, #88833e, transparent 100%);
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-right: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: right;}
+  div.content {margin-right: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+} 
+/* --------------------------- */
+/* The begine of healthy section*/
+.photoe img{
+
+  width:450px;height:350px;
+  border: solid 1px #555;
+  background-color: #eed;
+  box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+  -moz-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+  -webkit-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+  -o-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+  border-radius:25px;
+  margin: 2rem 0rem 3rem 0rem;
+  opacity:1.8;
+
+}
+
+.section_table{
+  width: 280px;
+  text-align: center;
+  
+}
+
+.section_table a{
+
+  border-style:solid;
+
+}
+/* For the about page */
+#v{display:none;}
+#v ul li{list-style-position: inside; direction:rtl;}
+/* End of about page */
+
+/* For the statisticsPage */
+
+.sp .row{margin-bottom: 100px;}
+.sp .row h2{border-right:solid 6px #007b5e; margin-bottom: 50px;padding: 5px;text-align: right;}
+/*.vl {
+  border-left: 6px solid green;
+  height: 60px;
+  margin: 0px;
+}*/
+.sp .col-lg-4 {
+    border-radius: 20px;
+    background-color: #dee2e6;
+    margin: 6px;
+}
+@media screen and (max-width: 990px) {
+
+        .vl {
+            display: none;
+            margin-bottom: 10px;
+        }
+    }
+    /* End Of News Page */
+
+    .np {
+        margin-bottom: 5%;
+    }
+
+        .np .col-12 h2 {
+            border-right: solid 6px #007b5e;
+            margin-bottom: 50px;
+            padding: 5px;
+            text-align: right;
+        }
+
+        .np .justify-content-center .col-lg-3 {
+            margin: 10px;
+        }
+
+        .np .justify-content-center p {
+            font-size: 10px;
+        }
+
+    /* End  */
+
+    /* For the SeeNews Page */
+
+    .sn ul li {
+        list-style-type: none;
+        float: right;
+        margin: 5px;
+    }
+
+    .sn ul img {
+        width: 30px;
+        margin-bottom: 0px;
+        margin-top: 3px;
+    }
+
+    .sn p {
+        margin-bottom: 50px;
+        text-align: right;
+        font-size: 30px;
+    }
+
+    /* End */
+
+
+    /*For the Edit of statstics Page*/
+
+.st_edit {
+
+    background-color:antiquewhite;
+
+}
+

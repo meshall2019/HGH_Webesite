@@ -1,0 +1,274 @@
+﻿@model IEnumerable<HGH_Webesite.Models.NonModle>
+
+@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Our css -->
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="animate.css">
+    <title>Home Page</title>
+    <script src="js/orgchart.js"></script>
+
+</head>
+<body>
+
+
+    <!--Contents  Before The NavBar  -->
+
+    <div class="row">
+
+        <div class="col-6">
+
+            <img src="imgs/iconOfLang.png" class="iconLang" data-toggle="modal" data-target="#exampleModal">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div><h5 class="modal-title" id="exampleModalLabel  justify-content-center">اختر اللغة</h5></div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer">
+                            <img src="imgs/saudiArabia.png" class="iconSaudi" width="20px">
+                            <button type="button" class="btn btn-secondary"> العربية </button>
+                            <button type="button" class="btn btn-secondary">ENG</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-6">
+
+
+            <img src="imgs/global.png" class="iconLang" alt="">
+
+
+        </div>
+
+    </div>
+    <!--The End of Contents  Before The NavBar  -->
+    <!-- The Begin of the navBar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="About">حول المستشفى</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">تواصل معنا</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        المركز الإعلامي
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="NewsPage">الأخبار</a>
+                        <a class="dropdown-item" href="StatsticsPage">الإحصائيات</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="E_service"> الخدمات الإلكترونية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Sections">الأقسام</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="HomePage">الرئيسية</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- The End of the NavBar -->
+    <!-- The bigin of the info -->
+
+    <div class="container table-c"></div>
+
+    <div class="ns">
+
+        <h4 class="text-center">الهيكل التنضيمي</h4>
+
+    </div>
+
+
+
+
+    <div style="width:100%; height:1000px" ; id="tree"></div>
+
+    <script>
+  // modify text of node
+  OrgChart.templates.olivia.field_0 =
+        '<text class="field_0" style="font-size: 20px;" fill="#000000" x="150" y="30" text-anchor="middle">{val}</text>';
+
+
+        //effect onclick
+        OrgChart.templates.olivia.ripple = {
+        radius: 100,
+        color: "#2d6708fc",
+        rect: null,
+
+
+    };
+    //the size of node xy
+    OrgChart.templates.olivia.size = [300, 50];
+
+
+   //structure off nodes
+     var chart = new OrgChart(document.getElementById("tree"), {
+            collapse: {
+                level: 2},
+            template: "olivia",
+            enableSearch: true,
+            mouseScrool: OrgChart.action.scroll,
+            showYScroll: OrgChart.scroll.visible,
+            showXScroll: OrgChart.scroll.visible,
+            nodeBinding: {
+                field_0: "name",
+
+
+            },
+            miniMap: false,
+
+    tags: {
+        "first": {
+            template: "luba"
+        }
+    },
+
+            nodes: [
+                { id: 1 ,tags:["first"], name: "مدير مستشفى حايل العام" },
+                { id: 2, pid: 1,tags: ["assistant"] , name: "المجلس التنفيذي" },
+                { id: 3, pid: 1,tags: ["assistant"], name: "مدير مكتب مدير المستشفى"},
+                { id: 4, pid: 1, tags: ["assistant"],name: "تجربة المريض"},
+                { id: 5, pid: 1,tags: ["assistant"], name: "الجودة وسلامة المرضى"},
+                { id: 6, pid: 1,tags: ["assistant"],name: "الادارة المناوبة"},
+                { id: 7, pid: 1,tags: ["assistant"],name: "الشؤون القانونية"},
+                { id: 8, pid: 1,tags: ["assistant"],name: "مكافحة العدوى"},
+                { id: 9, pid: 1, tags: ["assistant"],name: "مدير خدمات التمريض"},
+                { id: 10, pid: 1,tags: ["assistant"],name: "الاعلام والعلاقات العامة"},
+                { id: 11, pid: 1, tags: ["assistant"],name: "الصحة الالكترونية"},
+                { id: 12, pid: 1,tags: ["assistant"],name: "تنمية الموارد الذاتية"},
+                { id: 13, pid: 1,name: "المساعد الفني للخدمات الطبية"},
+                { id: 14, pid: 1,name: "المساعد للخدمات الطبية المساندة"},
+                { id: 15, pid: 1,name: "المساعد للموارد البشرية"},
+                { id: 16, pid: 1,name: "المساعد للشؤون المالية والادارية"},
+                { id: 17, pid: 1,name: "المساعد للتشغيل والصيانة"},
+                { id: 18, pid: 1,name: "المساعد للمراكز الصحية التابعة"},
+                //تجربة المريض
+                { id: 19, pid: 4, name: "مكتب اولوية"},
+                // الجودة وسلامة المرضى
+                { id: 20, pid: 5, name: "إدارة الجودة"},
+                { id: 21, pid: 5, name: "سلامة المرضى وإدارة المخاطر"},
+                // مكافحة العدوى
+                { id: 22, pid: 8, name: "عيادة الموظفين"},
+                { id: 23, pid: 8, name: "التعقيم المركزي"},
+                { id: 24, pid: 8, name: "النفايات الطبية"},
+                   // الصحة الالكترونية
+                { id: 25, pid: 11, name: "الدعم الفني"},
+                { id: 26, pid: 11, name: "الإحصاء"},
+                { id: 27, pid: 11, name: "الشبكات والإتصالات"},
+                   // تنمية الموارد الذاتية
+                { id: 28, pid: 12, name: "الضمان الصحي"},
+                   // المساعد الفني للخدمات الطبية
+                   { id: 29, pid: 13, name: "الجراحة"},
+                   { id: 30, pid: 13, name: "الباطنية"},
+                   { id: 31, pid: 13, name: "الأنف والأذن والحنجرة"},
+                   { id: 32, pid: 13, name: "العناية المركزة"},
+                   { id: 34, pid: 13, name: "النساء والولادة"},
+                   { id: 35, pid: 13, name: "الأطفال وعناية الأطفال"},
+                   { id: 36, pid: 13, name: "الطوارئ والإسعاف"},
+                   { id: 37, pid: 13, name: "عناية حديثي الولادة"},
+                   { id: 38, pid: 13, name: "العيادات الخارجية"},
+                   { id: 39, pid: 13, name: "شؤون المرضى"},
+                   { id: 40, pid: 13, name: "المراجعة الاكلنيكية"},
+                   { id: 41, pid: 13, name: "الصحة العامة"},
+                   { id: 42, pid: 13, name: "إدارة الأسرة"},
+                   { id: 43, pid: 13, name: "الخدمات الاجتماعية"},
+                   { id: 44, pid: 13, name: "السكرتارية الطبية"},
+                   { id: 45, pid: 13, name: "التنسيق الطبي"},
+                   { id: 46, pid: 13, name: "الطب المنزلي"},
+                   { id: 47, pid: 13, name: "العلاج التنفسي"},
+                   { id: 48, pid: 13, name: "التخدير والعمليات"},
+                   { id: 49, pid: 13, name: "العزل"},
+                   { id: 89, pid: 13, name: "السجلات الطبية"},
+                 // المساعد للخدمات الطبية المساندة
+                 { id: 50, pid: 14, name: "الأشعة"},
+                 { id: 51, pid: 14, name: "المختبر وبنك الدم"},
+                 { id: 52, pid: 14, name: "الصيدلية"},
+                 { id: 53, pid: 14, name: "العلاج الطبيعي"},
+                 { id: 54, pid: 14, name: "التثقيف الصحي"},
+                 { id: 55, pid: 14, name: "التغذية العامة"},
+                 { id: 56, pid: 14, name: "التغذية العلاجية"},
+                 // المساعد للموارد البشريه
+                 { id: 57, pid: 15, name: "خدمات الموارد البشرية"},
+                 { id: 58, pid: 15, name: "الشؤون الأكاديمية"},
+                 { id: 59, pid: 15, name: "التواصل الداخلي"},
+                 { id: 60, pid: 15, name: "تخطيط الموارد البشرية"},
+                 { id: 61, pid: 15, name: "مراقبة الدوام"},
+                 // المساعد للشؤون المالية والادارية
+                 { id: 62, pid: 16, name: "الشؤون المالية"},
+                 { id: 63, pid: 16, name: "المشتريات"},
+                 { id: 64, pid: 16, name: "مراقبة المخزون"},
+                 { id: 65, pid: 16, name: "الاتصالات الإدارية"},
+                 { id: 66, pid: 16, name: "المستودعات والتموين الطبي"},
+                 { id: 67, pid: 16, name: "المراجعة الداخلية"},
+                 // المساعد للتشغيل والصيانة
+                 { id: 68, pid: 17, name: "الصيانة الطبية"},
+                 { id: 69, pid: 17, name: "الثلاجة"},
+                 { id: 70, pid: 17, name: "السكن"},
+                 { id: 71, pid: 17, name: "الصيانة العامة"},
+                 { id: 72, pid: 17, name: "سلامة المنشأة والأمن"},
+                 { id: 73, pid: 17, name: "الخدمات العامة"},
+                 // المساعد للمراكز الصحية التابعة
+                 { id: 74, pid: 18, name: "مركز صحي العزيزية"},
+                 { id: 75, pid: 18, name: "مركز صحي المنتزه الشرقي"},
+                 { id: 76, pid: 18, name: "مركز صحي المنتزه الغربي"},
+                 { id: 77, pid: 18, name: "مركز صحي أجا"},
+                 { id: 78, pid: 18, name: "مركز صحي البادية"},
+                 { id: 79, pid: 18, name: "مركز صحي صلاح الدين"},
+                 { id: 80, pid: 18, name: "مركز صحي الزهرة"},
+                 { id: 81, pid: 18, name: "مركز صحي لبدة"},
+                 { id: 82, pid: 18, name: "مركز صحي الطريفي"},
+                 { id: 83, pid: 18, name: "مركز صحي القاعد"},
+                 { id: 84, pid: 18, name: "مركز صحي جبة"},
+                 { id: 85, pid: 18, name: "مركز صحي أم القلبان"},
+                 { id: 86, pid: 18, name: "مركز صحي النيصية"},
+                 { id: 87, pid: 18, name: "مركز صحي الخطة"},
+                 { id: 88, pid: 18, name: "مركز صحي قناء"}
+
+            ]
+        });
+
+
+    </script>
+
+
+    <!-- Js Files-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="wow.min.js"></script>
+
+
+</body>
+</html>

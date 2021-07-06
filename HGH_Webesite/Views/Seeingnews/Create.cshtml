@@ -1,0 +1,67 @@
+﻿@model HGH_Webesite.Models.StatsticsPage
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>StatsticsPage</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ER" class="control-label"></label>
+                <input asp-for="ER" class="form-control" />
+                <span asp-validation-for="ER" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OPD" class="control-label"></label>
+                <input asp-for="OPD" class="form-control" />
+                <span asp-validation-for="OPD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OR" class="control-label"></label>
+                <input asp-for="OR" class="form-control" />
+                <span asp-validation-for="OR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="rays" class="control-label"></label>
+                <input asp-for="rays" class="form-control" />
+                <span asp-validation-for="rays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BRITH" class="control-label"></label>
+                <input asp-for="BRITH" class="form-control" />
+                <span asp-validation-for="BRITH" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LAB" class="control-label"></label>
+                <input asp-for="LAB" class="form-control" />
+                <span asp-validation-for="LAB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>
